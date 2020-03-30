@@ -1,0 +1,17 @@
+body {
+
+    padding: 2em;
+
+}
+
+label {
+    font-size: larger;
+}
+
+input{
+    display: inline-block;
+}
+
+button {
+    margin-left: 1em;
+}

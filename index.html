@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Taller Typescript</title>
+</head>
+<body>
+    <div class="container"> 
+        <div class="row">
+            <div class="col">   
+                <h1>Antoine Noreau</h1>
+
+                <img class="img-fluid max-width: 100% height: auto" src="./finissant_simple.png" height="183px" width="230px" alt="Graduation picture">
+                
+                <table class="table">
+                    <h2>Datos Personales</h2>
+                    <thead>
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentInfo">
+                        
+                    </tbody>    
+                </table>
+            </div>
+            <div class="col">
+                <h2>Cursos Actuales</h2>
+                <form style="margin:10px;">
+                    <div class="form-row">
+                      <div class="col">
+                          <input type="text" class="form-control" id="search-box" placeholder="Filtrar por nombre">
+                      </div>
+                      <div class="col">
+                          <button type="button" id="button-filterByName" class="btn btn-success">Aplicar</button>
+                      </div>
+                    </div>
+                </form>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th style=" padding-left: 0.4em;">Curso</th>
+                            <th style=" padding-left: 0.4em;">Profesor</th>
+                            <th style=" padding-left: 0.4em;">Créditos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courses">
+                    </tbody>    
+                </table>
+                <form style="margin:10px;">
+                    <div class="form">
+                        <label>Filtrar por créditos</label>
+                        <div class="row">
+                            <div class="col-2">
+                                <span>Minimum</label>
+                            </div>
+                            <div class="col-2">
+                                <input name="minbox" type="number" min="0" class="form-control" id="min-box" onchange="document.getElementById('max-box').min = this.value">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <span>Minimum</label>
+                            </div>
+                            <div class="col-2">
+                                <input name="maxbox" type="number" class="form-control" id="max-box" onchange="document.getElementById('min-box').max = this.value">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button type="button" id="button-filterByCredits" class="btn btn-success">Aplicar</button>
+                        </div>
+                      
+                    </div>
+                </form>
+                <div class="row justify-content-end">
+                    <h5 class="col-4"><strong>Total Créditos:</strong></h5>
+                    <h5 class="col-4" id="total-credits"><strong></strong></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./scripts/course.js" ></script>
+    <script type="module" src="./scripts/dataCourses.js" ></script>
+    <script type="module" src="./scripts/student.js" ></script>
+    <script type="module" src="./scripts/studentData.js" ></script>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
